@@ -43,7 +43,13 @@ export default function Home() {
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             {products.map(product => (
               <div key={product.id} className="bg-white rounded-lg shadow p-4">
-                <img src={product.image} alt={product.name} className="w-full h-64 object-cover rounded" />
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  width={400}
+                  height={300}
+                  className="w-full h-64 object-cover rounded"
+                />
                 <h4 className="mt-4 text-2xl font-black text-black">{product.name}</h4>
                 <p className="text-blue-600 font-bold text-lg">{product.price} บาท </p>
                 <p className="text-gray-700 font-sm">{product.desciption}</p>

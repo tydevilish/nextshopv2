@@ -22,3 +22,14 @@ model Products {
   desciption String?
   cetagory String?
 }
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  username  String   @unique
+  email     String   @unique
+  password  String
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+}
+
+
