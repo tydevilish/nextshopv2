@@ -32,6 +32,7 @@ const LoginPage: React.FC = () => {
                 }
             }
         } catch (error) {
+            console.log(error)
 
         } finally {
             setLoading(false);
@@ -80,7 +81,7 @@ const LoginPage: React.FC = () => {
                     {LoginSuccess ? " Logged in successfully" : loading ? " Logging in..." : message != "" ? message : "Login"}
                 </button>
                 <p className="mt-4 text-sm text-center text-gray-600">
-                    Don't have an account?{' '}
+                    Don&apos;t have an account?{' '}
                     <a href="/register" className="text-blue-500 hover:underline">
                         Sign up
                     </a>
