@@ -8,6 +8,7 @@ export async function GET() {
             data: data
         });
     } catch (error) {
+        console.error(error);
         return NextResponse.json({
             message: "Error"
         });
