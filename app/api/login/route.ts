@@ -13,11 +13,11 @@ export async function POST(req: NextRequest) {
         const body = await req.json() as LoginBody;
 
         if (!body) return NextResponse.json({
-            massage: 'Body Invalid',
+            message: 'Body Invalid',
         })
 
         if (!body.email || !body.password) return NextResponse.json({
-            massage: 'Please provide email and password',
+            message: 'Please provide email and password',
         })
 
         const hashPassword = createHash('sha256').update(body.password).digest('hex');
